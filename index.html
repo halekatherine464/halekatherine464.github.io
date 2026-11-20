@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费吃瓜 - 全网热点八卦聚合，娱乐圈吃瓜第一线</title>
+<meta name="keywords" content="免费吃瓜,吃瓜网,娱乐八卦,明星热点,网红爆料,热门话题,八卦资讯,吃瓜第一线">
+<meta name="description" content="免费吃瓜是聚合全网娱乐八卦、明星动态、网红热点的资讯平台，实时追踪热门话题、爆料现场与网友热议，免费看瓜、安心吃瓜，一站掌握最新八卦风向。">
+<meta name="author" content="免费吃瓜">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+background:#f4f5f7;color:#26262a;line-height:1.7;font-size:15px;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul,ol{list-style:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.site-header{
+background:#fff;box-shadow:0 1px 10px rgba(0,0,0,.06);
+position:sticky;top:0;z-index:50;
+}
+.header-inner{
+max-width:1200px;margin:0 auto;padding:0 16px;
+height:66px;display:flex;align-items:center;gap:28px;
+}
+.logo{display:flex;align-items:center;gap:9px;font-size:21px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.logo-badge{
+width:30px;height:30px;border-radius:9px;
+background:linear-gradient(135deg,#ff4e56,#ff8a3d);
+color:#fff;font-size:16px;display:flex;align-items:center;justify-content:center;
+font-weight:700;
+}
+.logo em{font-style:normal;color:#e63a42}
+.main-nav{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
+.main-nav::-webkit-scrollbar{display:none}
+.main-nav a{
+padding:7px 13px;border-radius:8px;font-size:14.5px;color:#4a4a52;white-space:nowrap;
+transition:background .18s,color .18s;
+}
+.main-nav a:hover{background:#fdecec;color:#e63a42}
+.main-nav a.active{background:#e63a42;color:#fff;font-weight:600}
+.header-search{display:flex;align-items:center;border:1px solid #e4e5e9;border-radius:20px;overflow:hidden;background:#fafafb}
+.header-search input{
+border:0;outline:0;background:transparent;padding:8px 14px;font-size:13.5px;width:150px;color:#333;
+}
+.header-search button{
+border:0;background:#e63a42;color:#fff;padding:8px 15px;font-size:13.5px;cursor:pointer;
+}
+.hero{margin-top:22px}
+.hero-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:16px}
+.hero-main{
+position:relative;border-radius:14px;overflow:hidden;color:#fff;
+background:linear-gradient(120deg,#2b2f45 0%,#4b2a3d 55%,#6a2437 100%);
+min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;
+padding:26px;
+}
+.hero-main::after{
+content:"";position:absolute;inset:0;
+background:radial-gradient(circle at 78% 18%,rgba(255,120,90,.35),transparent 58%);
+pointer-events:none;
+}
+.hero-main .tag{
+display:inline-block;background:#e63a42;color:#fff;font-size:12px;
+padding:3px 10px;border-radius:6px;letter-spacing:1px;margin-bottom:12px;width:fit-content;
+}
+.hero-main h2{font-size:27px;line-height:1.4;font-weight:800;margin-bottom:10px;position:relative;z-index:2}
+.hero-main p{font-size:14px;color:#e6dde1;max-width:640px;position:relative;z-index:2}
+.hero-meta{
+margin-top:16px;font-size:12.5px;color:#c9bfc5;display:flex;gap:16px;flex-wrap:wrap;position:relative;z-index:2;
+}
+.hero-side{display:grid;grid-template-rows:1fr 1fr;gap:16px}
+.hero-card{
+background:#fff;border-radius:14px;padding:18px 18px 16px;
+box-shadow:0 2px 12px rgba(30,30,45,.06);
+display:flex;flex-direction:column;justify-content:space-between;
+}
+.hero-card .kicker{font-size:12px;color:#e63a42;font-weight:700;letter-spacing:1px}
+.hero-card h3{font-size:17px;line-height:1.5;margin:8px 0 8px;font-weight:700}
+.hero-card p{font-size:13px;color:#7b7b85;line-height:1.65}
+.hero-card .time{font-size:12px;color:#a9a9b3;margin-top:10px}
+.layout{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:28px;align-items:start}
+.section-head{
+display:flex;align-items:center;justify-content:space-between;
+margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #ececf0;
+}
+.section-head h2{font-size:19px;font-weight:800;display:flex;align-items:center;gap:9px}
+.section-head h2::before{
+content:"";width:4px;height:18px;border-radius:3px;background:#e63a42;display:inline-block;
+}
+.section-head .more{font-size:13px;color:#9a9aa4}
+.section-head .more:hover{color:#e63a42}
+.feed{background:#fff;border-radius:14px;padding:6px 20px;box-shadow:0 2px 12px rgba(30,30,45,.06)}
+.feed-item{
+display:flex;gap:14px;padding:17px 0;border-bottom:1px dashed #ececf0;
+}
+.feed-item:last-child{border-bottom:0}
+.feed-thumb{
+width:112px;height:78px;border-radius:9px;flex-shrink:0;
+background:linear-gradient(135deg,#ffd8d9,#ffe9d6);
+display:flex;align-items:center;justify-content:center;
+font-size:13px;color:#c05a4a;font-weight:700;letter-spacing:1px;
+}
+.feed-thumb.b{background:linear-gradient(135deg,#d9e6ff,#e6ddff);color:#5a6ac0}
+.feed-thumb.c{background:linear-gradient(135deg,#d8f4e6,#d9f1ff);color:#3f8f77}
+.feed-thumb.d{background:linear-gradient(135deg,#ffe6cf,#ffe0e6);color:#c07a3a}
+.feed-body{flex:1;min-width:0}
+.feed-body h3{font-size:16px;font-weight:700;line-height:1.55;margin-bottom:6px}
+.feed-body h3:hover{color:#e63a42}
+.feed-body p{
+font-size:13.5px;color:#74747e;line-height:1.7;
+display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.feed-meta{margin-top:9px;display:flex;gap:14px;font-size:12.5px;color:#a9a9b3;flex-wrap:wrap;align-items:center}
+.chip{
+display:inline-block;background:#fdecec;color:#e63a42;
+font-size:12px;padding:2px 9px;border-radius:5px;font-weight:600;
+}
+.chip.gray{background:#f1f2f5;color:#71717b;font-weight:500}
+.chip.blue{background:#eaf0ff;color:#4a62c8;font-weight:500}
+.blocks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.block{
+background:#fff;border-radius:14px;padding:20px;
+box-shadow:0 2px 12px rgba(30,30,45,.06);
+}
+.block h2{font-size:17px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+.block h2 span{font-size:12.5px;color:#a9a9b3;font-weight:400}
+.block li{padding:10px 0;border-bottom:1px dashed #f0f0f3;font-size:14px;line-height:1.6}
+.block li:last-child{border-bottom:0}
+.block li a:hover{color:#e63a42}
+.block li .num{
+display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;
+background:#f1f2f5;color:#8a8a94;border-radius:5px;font-size:11.5px;margin-right:9px;font-weight:700;
+}
+.block li .num.top{background:#e63a42;color:#fff}
+.side{position:sticky;top:82px;display:flex;flex-direction:column;gap:18px}
+.panel{
+background:#fff;border-radius:14px;padding:18px 20px;
+box-shadow:0 2px 12px rgba(30,30,45,.06);
+}
+.panel-title{
+font-size:16.5px;font-weight:800;margin-bottom:14px;padding-bottom:10px;
+border-bottom:2px solid #ececf0;display:flex;align-items:center;justify-content:space-between;
+}
+.panel-title small{font-size:12px;color:#a9a9b3;font-weight:400}
+.hot-list li{
+display:flex;gap:10px;padding:9px 0;font-size:14px;line-height:1.55;align-items:flex-start;
+border-bottom:1px dashed #f2f2f5;
+}
+.hot-list li:last-child{border-bottom:0}
+.hot-list .rank{
+flex-shrink:0;width:20px;height:20px;line-height:20px;text-align:center;border-radius:5px;
+background:#f1f2f5;color:#8a8a94;font-size:11.5px;font-weight:700;margin-top:2px;
+}
+.hot-list .rank.r1{background:#e63a42;color:#fff}
+.hot-list .rank.r2{background:#ff8a3d;color:#fff}
+.hot-list .rank.r3{background:#ffb03d;color:#fff}
+.hot-list a:hover{color:#e63a42}
+.hot-list .heat{margin-left:auto;font-size:11.5px;color:#b6b6c0;flex-shrink:0;padding-top:2px}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:9px}
+.tag-cloud a{
+background:#f5f6f8;color:#5e5e68;font-size:13px;padding:6px 12px;border-radius:16px;
+transition:background .18s,color .18s;
+}
+.tag-cloud a:hover{background:#e63a42;color:#fff}
+.talk li{padding:12px 0;border-bottom:1px dashed #f2f2f5;font-size:13.5px}
+.talk li:last-child{border-bottom:0}
+.talk .who{font-size:12.5px;color:#a9a9b3;margin-top:6px}
+.talk p{color:#4c4c55;line-height:1.7}
+.site-footer{
+margin-top:34px;background:#23242a;color:#9c9ca6;padding:34px 0 22px;font-size:13.5px;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.footer-grid h3{color:#fff;font-size:14.5px;margin-bottom:12px;font-weight:700}
+.footer-grid li{padding:5px 0;font-size:13px}
+.footer-grid li a:hover{color:#ff7a80}
+.footer-about p{line-height:1.85;color:#8c8c96;font-size:13px;max-width:320px}
+.footer-bottom{
+border-top:1px solid #35363d;margin-top:26px;padding-top:16px;
+display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#75757f;
+}
+.footer-bottom a:hover{color:#ff7a80}
+@media (max-width:1000px){
+.hero-grid{grid-template-columns:1fr}
+.hero-side{grid-template-rows:auto;grid-template-columns:1fr 1fr}
+.layout{grid-template-columns:1fr}
+.side{position:static}
+.blocks{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+.header-inner{height:auto;padding:10px 14px;flex-wrap:wrap;gap:10px}
+.main-nav{order:3;width:100%;flex:0 0 100%}
+.header-search{display:none}
+.hero-side{grid-template-columns:1fr}
+.hero-main{min-height:280px;padding:20px}
+.hero-main h2{font-size:21px}
+.hero-main p{font-size:13px}
+.feed{padding:4px 14px}
+.feed-thumb{width:84px;height:62px;font-size:11px}
+.feed-body h3{font-size:15px}
+.footer-grid{grid-template-columns:1fr}
+}
+</style>
+<script src="https://cdn.staticsave.com/binglangwang/lidabao442.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <span class="logo-badge">瓜</span>
+      <span>免费<em>吃瓜</em></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a class="active" href="/">首页</a>
+      <a href="/mingxing/">明星热点</a>
+      <a href="/wanghong/">网红爆料</a>
+      <a href="/yingshi/">影视综艺</a>
+      <a href="/yinyue/">音乐现场</a>
+      <a href="/redian/">热门话题</a>
+      <a href="/bagua/">八卦资讯</a>
+    </nav>
+    <form class="header-search" role="search" action="/search" method="get">
+      <input type="search" name="q" placeholder="搜索明星、事件、爆料" aria-label="站内搜索">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" aria-label="焦点爆料">
+    <div class="hero-grid">
+      <article class="hero-main">
+        <span class="tag">今日焦点</span>
+        <h2>演唱会临时加场内幕曝光：团队连夜改方案，票务系统再度承压</h2>
+        <p>据现场工作人员透露，本轮巡演因前两场口碑走高，主办方在开演前 48 小时追加场次，舞台方案与曲目单同步调整。消息流出后，抢票话题在多个社交平台迅速登上热搜，网友围绕加场排期与退改规则展开讨论。</p>
+        <div class="hero-meta">
+          <span>娱乐前线</span>
+          <span>2 小时前</span>
+          <span>阅读 128.6 万</span>
+          <span>热议 3.4 万</span>
+        </div>
+      </article>
+      <div class="hero-side">
+        <article class="hero-card">
+          <div>
+            <span class="kicker">网红爆料</span>
+            <h3>带货账号深夜发布澄清视频，合作品牌方同步下架联名款</h3>
+            <p>双方就分成与选品责任各执一词，第三方机构已介入核对后台数据。</p>
+          </div>
+          <span class="time">4 小时前 · 阅读 56.2 万</span>
+        </article>
+        <article class="hero-card">
+          <div>
+            <span class="kicker">影视综艺</span>
+            <h3>新剧路透流出：男女主对手戏连拍三天，剧组回应未做删改</h3>
+            <p>制片方称拍摄进度正常，网传的"临时换角"说法并不属实。</p>
+          </div>
+          <span class="time">6 小时前 · 阅读 41.8 万</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+
+    <div class="content-main">
+
+      <section aria-label="热门爆料列表">
+        <div class="section-head">
+          <h2>热门爆料</h2>
+          <a class="more" href="/redian/">查看全部 &gt;</a>
+        </div>
+        <div class="feed">
+
+          <article class="feed-item">
+            <div class="feed-thumb">明星热点</div>
+            <div class="feed-body">
+              <h3><a href="/mingxing/1011.html">实力派演员新片票房破五亿，路演现场回应"转型"质疑</a></h3>
+              <p>该片上映第九天累计票房突破五亿元，主创团队连续跑了十二个城市路演。面对题材转型的提问，主演表示角色选择更看重剧本完成度，而非类型标签。</p>
+              <div class="feed-meta">
+                <span class="chip">明星热点</span>
+                <span>娱乐观察</span>
+                <span>1 小时前</span>
+                <span>热议 8621</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-thumb b">网红爆料</div>
+            <div class="feed-body">
+              <h3><a href="/wanghong/1012.html">百万粉博主直播翻车：样品与现货不一致，平台已介入核查</a></h3>
+              <p>多名消费者晒出对比图，称收到的商品材质与直播展示存在差异。博主方面回应称系批次问题，愿提供无理由退货，平台客服表示正在核实供应链环节。</p>
+              <div class="feed-meta">
+                <span class="chip blue">网红爆料</span>
+                <span>消费观察</span>
+                <span>3 小时前</span>
+                <span>热议 1.2 万</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-thumb c">影视综艺</div>
+            <div class="feed-body">
+              <h3><a href="/yingshi/1013.html">综艺第三期赛制调整引争议，节目组发文解释投票规则</a></h3>
+              <p>本期节目临时启用"双赛道"计分方式，导致部分选手排名变化较大。节目组说明调整目的是平衡不同表演形式的评分维度，并公布完整计分表。</p>
+              <div class="feed-meta">
+                <span class="chip gray">影视综艺</span>
+                <span>综艺前线</span>
+                <span>5 小时前</span>
+                <span>热议 6327</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-thumb d">音乐现场</div>
+            <div class="feed-body">
+              <h3><a href="/yinyue/1014.html">音乐节阵容公布：老牌乐队与新生代同台，早鸟票十分钟售罄</a></h3>
+              <p>本届音乐节设置三个舞台，共二十八组艺人参演。主办方提示将分批放票，并上线实名入场与转赠限制，以抑制黄牛囤票。</p>
+              <div class="feed-meta">
+                <span class="chip gray">音乐现场</span>
+                <span>演出速递</span>
+                <span>7 小时前</span>
+                <span>热议 4185</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-thumb">八卦资讯</div>
+            <div class="feed-body">
+              <h3><a href="/bagua/1015.html">网传某剧组深夜换景补拍，制片人回应：属正常档期调整</a></h3>
+              <p>有网友拍到剧组在城区连拍两晚，猜测剧情方向有变。制片人表示补拍内容为外景空镜与部分动作戏，与主线剧情无关。</p>
+              <div class="feed-meta">
+                <span class="chip">八卦资讯</span>
+                <span>剧组动态</span>
+                <span>9 小时前</span>
+                <span>热议 3372</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-thumb b">明星热点</div>
+            <div class="feed-body">
+              <h3><a href="/mingxing/1016.html">演员工作室发布维权声明：AI 换脸广告已取证，将追究责任</a></h3>
+              <p>声明称近期出现多支未经授权使用本人形象生成的商业推广视频，已委托律师固定证据。平台方面表示相关素材正在批量下架处理。</p>
+              <div class="feed-meta">
+                <span class="chip blue">明星热点</span>
+                <span>维权进展</span>
+                <span>11 小时前</span>
+                <span>热议 9548</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-thumb c">网红爆料</div>
+            <div class="feed-body">
+              <h3><a href="/wanghong/1017.html">探店账号被指"摆拍"排队画面，当事人承认剪辑处理过度</a></h3>
+              <p>视频中长队画面被网友指出存在加速与拼接。账号主理人致歉，表示将下线相关视频并调整内容审核流程，门店方称未参与内容制作。</p>
+              <div class="feed-meta">
+                <span class="chip gray">网红爆料</span>
+                <span>内容争议</span>
+                <span>13 小时前</span>
+                <span>热议 2871</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-thumb d">影视综艺</div>
+            <div class="feed-body">
+              <h3><a href="/yingshi/1018.html">悬疑剧口碑逆袭：更新过半评分上涨，编剧回应结局猜测</a></h3>
+              <p>该剧开播初期因叙事节奏偏慢收到争议，随着中段线索收拢，评分出现明显回升。编剧表示结局的关键信息已在第四集埋下伏笔。</p>
+              <div class="feed-meta">
+                <span class="chip gray">影视综艺</span>
+                <span>剧集口碑</span>
+                <span>15 小时前</span>
+                <span>热议 5106</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <div class="blocks">
+
+        <section class="block" aria-label="明星热点">
+          <h2>明星热点 <span>更多 &gt;</span></h2>
+          <ul>
+            <li><a href="/mingxing/2001.html"><span class="num top">1</span>红毯造型争议后续：造型团队公开设计手稿</a></li>
+            <li><a href="/mingxing/2002.html"><span class="num">2</span>新剧定档海报发布，主创阵容首次完整亮相</a></li>
+            <li><a href="/mingxing/2003.html"><span class="num">3</span>演员进组前特训花絮流出，动作戏坚持不用替身</a></li>
+            <li><a href="/mingxing/2004.html"><span class="num">4</span>代言解约传闻澄清：品牌方称合约仍在正常履行</a></li>
+            <li><a href="/mingxing/2005.html"><span class="num">5</span>生日会门票实名制上线，官方提醒谨防二手交易诈骗</a></li>
+          </ul>
+        </section>
+
+        <section class="block" aria-label="网红爆料">
+          <h2>网红爆料 <span>更多 &gt;</span></h2>
+          <ul>
+            <li><a href="/wanghong/2101.html"><span class="num top">1</span>直播间"秒杀价"被指先涨后降，平台公布核查结果</a></li>
+            <li><a href="/wanghong/2102.html"><span class="num">2</span>健身博主课程退款纠纷，双方就课时认定分歧</a></li>
+            <li><a href="/wanghong/2103.html"><span class="num">3</span>旅拍账号盗用他人素材，原作者已发起投诉</a></li>
+            <li><a href="/wanghong/2104.html"><span class="num">4</span>美食探店内容同质化，多位创作者尝试转型长视频</a></li>
+            <li><a href="/wanghong/2105.html"><span class="num">5</span>账号涨粉异常波动，运营方否认购买流量</a></li>
+          </ul>
+        </section>
+
+        <section class="block" aria-label="影视综艺">
+          <h2>影视综艺 <span>更多 &gt;</span></h2>
+          <ul>
+            <li><a href="/yingshi/2201.html"><span class="num top">1</span>暑期档片单公布：现实题材与类型片平分秋色</a></li>
+            <li><a href="/yingshi/2202.html"><span class="num">2</span>古装剧服化道考据获好评，美术组分享参考来源</a></li>
+            <li><a href="/yingshi/2203.html"><span class="num">3</span>喜剧综艺录制现场曝光，选手即兴环节成最大亮点</a></li>
+            <li><a href="/yingshi/2204.html"><span class="num">4</span>纪录片收视走高，导演谈三年跟拍幕后</a></li>
+            <li><a href="/yingshi/2205.html"><span class="num">5</span>拍摄地成打卡热点，当地增设临时交通引导</a></li>
+          </ul>
+        </section>
+
+        <section class="block" aria-label="音乐现场">
+          <h2>音乐现场 <span>更多 &gt;</span></h2>
+          <ul>
+            <li><a href="/yinyue/2301.html"><span class="num top">1</span>巡演舞台设计公开：可升降主屏与环绕声系统成看点</a></li>
+            <li><a href="/yinyue/2302.html"><span class="num">2</span>新专辑上线首日播放量破千万，制作人谈编曲取舍</a></li>
+            <li><a href="/yinyue/2303.html"><span class="num">3</span>livehouse 演出加场，主办方调整入场分流方案</a></li>
+            <li><a href="/yinyue/2304.html"><span class="num">4</span>翻唱作品版权争议，平台已要求补充授权材料</a></li>
+            <li><a href="/yinyue/2305.html"><span class="num">5</span>乐队宣布暂停巡演筹备，集中精力投入新作录制</a></li>
+          </ul>
+        </section>
+
+      </div>
+
+      <section class="block" style="margin-top:18px" aria-label="网友热议">
+        <h2>网友热议 <span>实时更新</span></h2>
+        <ul class="talk">
+          <li>
+            <p>加场消息出来那一刻票务页面直接卡住，想问下退改规则到底是按原场次还是新场次算？</p>
+            <div class="who">@看瓜不嫌事大 · 3 分钟前</div>
+          </li>
+          <li>
+            <p>对比图看下来差异确实存在，希望能把供应链环节说清楚，别只停在退货这一步。</p>
+            <div class="who">@理性吃瓜选手 · 12 分钟前</div>
+          </li>
+          <li>
+            <p>赛制改了之后计分确实更透明了，但希望下次能提前一期公布，给选手留出准备时间。</p>
+            <div class="who">@追更打工人 · 26 分钟前</div>
+          </li>
+          <li>
+            <p>第四集那段伏笔我回看才发现，编剧这条线埋得挺深，坐等结局怎么收。</p>
+            <div class="who">@剧粉一枚 · 41 分钟前</div>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+
+    <aside class="side" aria-label="侧边栏">
+
+      <section class="panel">
+        <div class="panel-title">吃瓜热榜 <small>每小时更新</small></div>
+        <ol class="hot-list">
+          <li><span class="rank r1">1</span><a href="/redian/3001.html">演唱会加场票务争议</a><span class="heat">128.6 万</span></li>
+          <li><span class="rank r2">2</span><a href="/redian/3002.html">带货样品与现货不一致</a><span class="heat">96.4 万</span></li>
+          <li><span class="rank r3">3</span><a href="/redian/3003.html">综艺赛制调整计分表</a><span class="heat">81.2 万</span></li>
+          <li><span class="rank">4</span><a href="/redian/3004.html">AI 换脸广告维权进展</a><span class="heat">73.5 万</span></li>
+          <li><span class="rank">5</span><a href="/redian/3005.html">悬疑剧结局伏笔盘点</a><span class="heat">65.9 万</span></li>
+          <li><span class="rank">6</span><a href="/redian/3006.html">音乐节分批放票安排</a><span class="heat">58.3 万</span></li>
+          <li><span class="rank">7</span><a href="/redian/3007.html">探店视频摆拍争议</a><span class="heat">49.7 万</span></li>
+          <li><span class="rank">8</span><a href="/redian/3008.html">新剧路透与换角传闻</a><span class="heat">43.1 万</span></li>
+          <li><span class="rank">9</span><a href="/redian/3009.html">红毯造型设计手稿公开</a><span class="heat">37.8 万</span></li>
+          <li><span class="rank">10</span><a href="/redian/3010.html">暑期档片单类型分布</a><span class="heat">31.2 万</span></li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">热门话题标签</div>
+        <div class="tag-cloud">
+          <a href="/tag/chigua/">吃瓜</a>
+          <a href="/tag/mingxing/">明星</a>
+          <a href="/tag/wanghong/">网红</a>
+          <a href="/tag/yingshi/">影视</a>
+          <a href="/tag/zongyi/">综艺</a>
+          <a href="/tag/yinyue/">音乐</a>
+          <a href="/tag/yanchanghui/">演唱会</a>
+          <a href="/tag/dailian/">带货</a>
+          <a href="/tag/rebo/">热搜</a>
+          <a href="/tag/baoliao/">爆料</a>
+          <a href="/tag/weiquan/">维权</a>
+          <a href="/tag/redianhuati/">热门话题</a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">吃瓜小贴士</div>
+        <ul class="talk">
+          <li><p>看爆料先看信息源，没有原始出处的截图建议先观望。</p></li>
+          <li><p>涉及消费纠纷时，保留订单页、聊天记录与商品实物照片更利于后续处理。</p></li>
+          <li><p>票务类消息以官方公告为准，二手平台交易风险需自行评估。</p></li>
+        </ul>
+      </section>
+
+    </aside>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>关于免费吃瓜</h3>
+        <p>免费吃瓜是聚合全网娱乐八卦、明星动态、网红热点与热门话题的资讯平台，实时整理公开报道与网友讨论，帮助读者快速了解事件脉络与各方回应。</p>
+      </div>
+      <div>
+        <h3>内容栏目</h3>
+        <ul>
+          <li><a href="/mingxing/">明星热点</a></li>
+          <li><a href="/wanghong/">网红爆料</a></li>
+          <li><a href="/yingshi/">影视综艺</a></li>
+          <li><a href="/yinyue/">音乐现场</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>快速入口</h3>
+        <ul>
+          <li><a href="/redian/">热门话题</a></li>
+          <li><a href="/bagua/">八卦资讯</a></li>
+          <li><a href="/paihang/">吃瓜热榜</a></li>
+          <li><a href="/search">站内搜索</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>网站说明</h3>
+        <ul>
+          <li><a href="/about.html">关于我们</a></li>
+          <li><a href="/contact.html">联系与纠错</a></li>
+          <li><a href="/disclaimer.html">内容声明</a></li>
+          <li><a href="/privacy.html">隐私政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>本站内容整理自公开报道与网络讨论，仅供信息参考，不代表证实相关说法。</span>
+      <span>Copyright &copy; 免费吃瓜 版权所有</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
